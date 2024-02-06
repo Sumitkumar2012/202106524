@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <link rel="import" href="../source/signin.html">
+    <title>EasifyShop</title>
+    <script>
+        function toggleMission(){
+            var div=document.querySelector('#missiondiv');
+            console.log("toggle mission text", div.style);
+            if(div.style.display=='none')
+            {
+                console.log("display is now going to be block",div);
+                div.style.display='block';
+            }
+            else if(div.style.display=='block')
+            {
+                console.log("display is now going to be none", div);
+                div.style.display='none';
+            }
+
+        }
+        function toggleTagline(){
+            var div=document.querySelector('#taglinediv');
+            console.log("toggle mission text", div.style);
+            if(div.style.display=='none')
+            {
+                console.log("display is now going to be block",div);
+                div.style.display='block';
+            }
+            else if(div.style.display=='block')
+            {
+                console.log("display is now going to be none", div);
+                div.style.display='none';
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="homepage">
+        <div class="panel">
+            <div class="logoimg">
+                <div class="logo">EasifyShop</div>
+                <img src="../images/sitelogo.jpg" alt="">
+            </div> 
+            <div class="bar"> 
+                <a class="about" href="../source/feature.html">Features
+                    <div class="aboutunderline" id="aboutline"></div>
+                </a>
+                <a class="order" href="../source/workflow.html">WorkFlow
+                    <div class="underline" id="orderline"></div>
+                </a>
+                <a class="feedback" href="../source/feedback.html">Feedback
+                    <div class="feedunderline" id="feedline"></div>
+                </a>
+                <a class="signin"  href="../source/signin.html">Sign In</a>
+            </div>
+        </div>
+        <div class="content" >
+            <div class="left">
+                <div class="maintext"><span class="essential">EasifyShop </span> is pleased to present this proposal for the development of a comprehensive <span class="essential">e-commerce platform</span> that offers a user-friendly interface, secure payment processing, and a wide range of products to cater to diverse customer needs. In response to the growing demand for online shopping, our proposed solution aims to create a robust platform that provides a seamless and secure shopping experience for users.<br><span class="essential">EasifyShop</span> wants the affordable product to reach every end consumer with just one single click.
+                </div>
+                <div class="divtext">
+                    <div class="text" onclick={toggleMission()}>Our Mission</div>
+                    <div class="missiontext" id="missiondiv" style="display: block;">Our mission is to provide high-quality products that enhance your experience while maintaining a commitment to environmental sustainability</div>
+                </div>
+                <div class="divtext">
+                    <div class="text" onclick={toggleTagline()}>Our Tagline</div>
+                    <div class="subtext" id="taglinediv" style="display: block;">Unleash the Power of Choice: Your One-Stop E-commerce Wonderland!</div>
+                </div>
+                
+            </div>
+            <div class="right">
+                <img src="../images/home-page.png" alt="">
+            </div>
+           
+        </div>
+        
+        <div class="name"> <p class="owner">sumit kumar</p>
+            <p class="stud">202106524</p></div>
+    </div>
+</body>
+</html>

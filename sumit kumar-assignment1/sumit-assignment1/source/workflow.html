@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkFlow</title>
+    <link rel="stylesheet" href="../styles/workflowPage.css">
+    <script>
+    function toggle(param){
+            var divid='#textdiv'+param;
+            var div=document.querySelector(divid);
+            console.log("toggle mission text", div.style);
+            if(div.style.display=='none')
+            {
+                console.log("display is now going to be block",div);
+                div.style.display='block';
+            }
+            else if(div.style.display=='block')
+            {
+                console.log("display is now going to be none", div);
+                div.style.display='none';
+            }
+
+        }
+        var one=1;
+        var two=2;
+        var three=3;
+        var four=4;
+        var five=5;
+    </script>
+</head>
+<body>
+    <div class="shoppage">
+        <div class="panel">
+            <div class="homepageImg">
+                <a href="../source/home.html"><img class="homeimg" src="../images/homepageimg.png" alt=""></a>
+            </div>
+            <div class="bar"> 
+                <a class="about" href="../source/feature.html">Features
+                    <div class="aboutunderline" id="aboutline"></div>
+                </a>
+                <a class="order" href="../source/workflow.html">WorkFlow
+                    <div class="underline" id="orderline"></div>
+                </a>
+                <a class="feedback" href="../source/feedback.html">Feedback
+                    <div class="feedunderline" id="feedline"></div>
+                </a>
+                <a class="signin"  href="../source/signin.html">Sign In</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="divtext">
+                <div class="text" onclick={toggle(one)}>Home Page</div>
+                <div class="subtext" id="textdiv1" style="display: block;">Customers can go to four different pages (Shop, Feedback, About, Sign In) from home page.<br>Vertical page options would be given on vertical device.</div>
+            </div>
+            <div class="divtext">
+                <div class="text" onclick={toggle(two)}>Sign In Page</div>
+                <div class="subtext" id="textdiv2" style="display: block;">Customer has to first sign in with EasifyShop before shopping.<br>Email verification would be done before signing in the user (email must contain ‘@’ and ‘.’ as characters).</div>
+            </div>
+            <div class="divtext">
+                <div class="text" onclick={toggle(three)}>Shop Page</div>
+                <div class="subtext" id="textdiv3" style="display: block;">Sign In would be must before adding the product to the cart.<br> User can add displayed product to his cart. User can choose quantity of a particular product before adding it to the cart. <br>Then, the user can place order on clicking place order button after adding the products to the cart.</div>
+            </div>
+            <div class="divtext">
+                <div class="text" onclick={toggle(four)}>Order Detail Page</div>
+                <div class="subtext" id="textdiv4" style="display: block;">The products added to the cart will be shown in tabular format on this page.<br>After adding the shipping address, the user can proceed to pay on clicking the pay button and window alert will confirm that order is placed.<br>Shipping address verification will also be done (It should not be empty).</div>
+            </div>
+            <div class="divtext">
+                <div class="text" onclick={toggle(five)}>Feedback Page</div>
+                <div class="subtext" id="textdiv5" style="display: block;">Sign In would be must before submitting the feedback form.<br>Email address verification would be done (email must contain ‘@’ and ‘.’ as characters).<br>Email Address should match with the signed in email address.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

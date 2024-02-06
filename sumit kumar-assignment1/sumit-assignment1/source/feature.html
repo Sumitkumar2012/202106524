@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="../styles/featurePage.css">
+</head>
+<script>
+     function toggle(param){
+            var divid='#textdiv'+param;
+            var div=document.querySelector(divid);
+            console.log("toggle mission text", div.style);
+            if(div.style.display=='none')
+            {
+                console.log("display is now going to be block",div);
+                div.style.display='block';
+            }
+            else if(div.style.display=='block')
+            {
+                console.log("display is now going to be none", div);
+                div.style.display='none';
+            }
+
+        }
+        var one=1;
+        var two=2;
+        var three=3;
+        var four=4;
+        var five=5;
+</script>
+<body>
+    <div class="aboutpage">
+    <div class="panel">
+        <div class="homepageImg">
+            <a href="../source/home.html"><img class="homeimg" src="../images/homepageimg.png" alt=""></a>
+        </div>
+        <div class="bar"> 
+            <a class="about" href="../source/feature.html">Features
+                <div class="aboutunderline" id="aboutline"></div>
+            </a>
+            <a class="order" href="../source/workflow.html">WorkFlow
+                <div class="underline" id="orderline"></div>
+            </a>
+            <a class="feedback" href="../source/feedback.html">Feedback
+                <div class="feedunderline" id="feedline"></div>
+            </a>
+            <a class="signin"  href="../source/signin.html">Sign In</a>
+        </div>
+    </div>
+    <div class="aboutcontent">
+        <div class="divtext">
+            <div class="text" onclick={toggle(one)}>Intuitive User Interface</div>
+            <div class="subtext" id="textdiv1" style="display: block;">To develop a visually appealing and easy-to-navigate interface to enhance the user experience.<br>To implement responsive design for optimal performance on various devices.</div>
+        </div>
+        <div class="divtext">
+            <div class="text" onclick={toggle(two)}>User Authentication and Authorization</div>
+            <div class="subtext" id="textdiv2" style="display: block;">To develop a robust user authentication system to secure user accounts.<br>To implement role-based authorization for administrators, customers, and other user types.</div>
+        </div>
+        <div class="divtext">
+            <div class="text" onclick={toggle(three)}>Product Management System</div>
+            <div class="subtext" id="textdiv3" style="display: block;">To implement a comprehensive product management system to easily add, edit, and remove products.<br> To include features like product categorization, search functionality, and product reviews.</div>
+        </div>
+        <div class="divtext">
+            <div class="text" onclick={toggle(four)}>Shopping Cart and Checkout Process</div>
+            <div class="subtext" id="textdiv4" style="display: block;">To design an efficient shopping cart system with the ability to add, edit, and remove items</div>
+        </div>
+        <div class="divtext">
+            <div class="text" onclick={toggle(five)}>Technology Stack</div>
+            <div class="subtext" id="textdiv5" style="display: block;">Frontend: [HTML, CSS, JavaScript]<br>Backend: [PHP]<br>Database: [MySQL Database]</div>
+        </div>
+    </div>
+    <div class="name"> <p class="owner">sumit kumar</p>
+        <p class="stud">202106524</p></div>
+</div>
+</body>
+</html>

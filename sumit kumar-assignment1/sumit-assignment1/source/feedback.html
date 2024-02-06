@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="../styles/feedbackPage.css">
+    <script>
+        function submitClick(){
+            var email=document.getElementById('emailIdfeedback').value;
+            var signedFlag = localStorage.getItem('SignInFlag')?JSON.parse(localStorage.getItem('SignInFlag')):{};
+            console.log("signedFlag",signedFlag);
+            if(email=='')
+            {
+                window.alert('Please enter your email-id');
+            }
+            else if(signedFlag.email==email && signedFlag.signIn==true)
+            {
+               window.alert("Thanks for giving the feedback.");
+            }
+            else if(signedFlag.signIn==false)
+            window.alert("Sign In required");
+            else if(signedFlag.email!=email)
+            window.alert("Email Address is not matching with the Signed in Email Address");
+        }
+    </script>
+</head>
+<body>
+    <div class="feedbackpage">
+    <div class="panel">
+        <div class="homepageImg">
+            <a href="../source/home.html"><img class="homeimg" src="../images/homepageimg.png" alt=""></a>
+        </div>
+        <div class="bar"> 
+            <a class="about" href="../source/feature.html">Features
+                <div class="aboutunderline" id="aboutline"></div>
+            </a>
+            <a class="order" href="../source/workflow.html">WorkFlow
+                <div class="underline" id="orderline"></div>
+            </a>
+            <a class="feedback" href="../source/feedback.html">Feedback
+                <div class="feedunderline" id="feedline"></div>
+            </a>
+            <a class="signin"  href="../source/signin.html">Sign In</a>
+        </div>
+    </div>
+    <div class="content">
+    <div class="title">
+        <h1>Feedback Form</h1>
+    </div>
+    <div class="htmlform">
+        <form action="">
+            <div class="yourname">
+                <input id="emailIdfeedback" class="nameInput" type="text" name="Username" placeholder="Enter your Email Address" autofocus>
+            </div>
+            <div class="address">
+                <input class="addressInput" type="text" name="UserAddress" placeholder="Enter your address">
+            </div>
+            <div class="preferRole">
+                <label for="Role">How do you rate a User Interface:</label>
+                <select name="rate" class="userRole">
+                    <option value="first">Highly Interactive UI</option>
+                    <option value="second">Interactive UI</option>
+                    <option value="third">Average UI</option>
+                </select>
+            </div>
+            <div class="tell">
+                <textarea name="aboutUser" class="personalData" placeholder="Write your suggestions"></textarea>
+            </div>
+            <div class="buttons">
+                <div class="submit" onClick={submitClick()}>Submit</div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
